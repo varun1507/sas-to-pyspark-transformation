@@ -85,7 +85,7 @@ proc sql;
   group by customer_id;
 quit;
 ```
-
+---
 ### PySpark Equivalent
 
 ```python
@@ -98,21 +98,30 @@ df.filter("amount > 100") \
 
 ## 📊 Sample Output  
 
-customer_id | name  | city       | total_amount  
-------------|-------|------------|--------------  
-1           | Varun | Hyderabad  | 200  
-2           | Rahul | Bangalore  | 300  
+| customer_id | name  | city      | total_amount |
+|------------|-------|-----------|--------------|
+| 1          | Varun | Hyderabad | 200          |
+| 2          | Rahul | Bangalore | 300          |
 
 ---
-## ▶️ How to Run  
+## ▶️ How to Run
 
-1. Place input files in `data/` folder  
-2. Run PySpark script:  
+1. Place input files (`orders.csv`, `customers.csv`) inside the `data/` folder
+
+2. Run the PySpark script:
+
    ```bash
    python pyspark/transformation.py
+   ```
+
+3. The output will be displayed in the console
+
+4. (Optional) Modify the script to write output to a file if needed
+
 ---
 
 ## 🚀 Impact
 
 Demonstrates migration of legacy SAS ETL logic into scalable PySpark pipelines with validation and structured processing.
 
+---
