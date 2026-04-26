@@ -3,8 +3,10 @@
 ## 📌 Objective
 
 Convert SAS-based ETL logic into PySpark and validate output consistency.
------
-## 🧩 Business Use Case  
+
+---
+
+## 🧩 Business Use Case
 
 This project simulates an e-commerce scenario where customer order data is processed to generate aggregated insights.
 
@@ -14,7 +16,7 @@ The goal is to transform raw transactional data into meaningful metrics for repo
 
 ## 🧠 Architecture
 
-Source Data → PySpark Transformation → Aggregation → Validation → Output
+Source Layer → Transformation Layer (PySpark) → Aggregation → Validation Layer → Output Layer
 
 ---
 
@@ -47,10 +49,10 @@ Source Data → PySpark Transformation → Aggregation → Validation → Output
 
 ## 📂 Project Structure
 
-data/ → input dataset
-sas/ → original SAS logic
-pyspark/ → PySpark transformation code
-validation/ → result validation logic
+* `data/` → Input dataset
+* `sas/` → Original SAS logic
+* `pyspark/` → PySpark transformation code
+* `validation/` → Validation logic
 
 ---
 
@@ -77,7 +79,15 @@ df.filter("amount > 100") \
 
 ---
 
-## 📊 Outcome
+## 📊 Sample Output
 
-* Achieved equivalent results between SAS and PySpark
-* Demonstrated scalable data processing using Spark
+| customer_id | total_amount |
+| ----------- | ------------ |
+| 1           | 200          |
+| 2           | 300          |
+
+---
+
+## 🚀 Impact
+
+Demonstrates migration of legacy SAS ETL logic into scalable PySpark pipelines with validation and structured processing.
