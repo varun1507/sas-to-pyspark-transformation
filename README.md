@@ -27,9 +27,9 @@ Source Layer (CSV)
 
 ## 🛠️ Tech Stack
 
-* PySpark
-* SAS
-* Python
+* PySpark (Data Processing)
+* SAS (Legacy ETL)
+* Python (Programming Language)
 ---
 ## 📥 Data Sources  
 
@@ -122,6 +122,6 @@ df.filter("amount > 100") \
 
 ## 🚀 Impact
 
-Demonstrates migration of legacy SAS ETL logic into scalable PySpark pipelines with validation and structured processing.
+Demonstrates migration of legacy SAS ETL logic into scalable PySpark pipelines, including data enrichment, validation, and structured processing aligned with real-world data engineering practices.
 
 ---
