@@ -35,6 +35,12 @@ Source Layer → Transformation Layer (PySpark) → Aggregation → Validation L
 3. Perform aggregation
 4. Validate results
 5. Generate output
+---
+## 🔗 Join Logic  
+
+Order data is joined with customer data using `customer_id` to enrich transactional data with customer attributes such as name and city.
+
+This step enables generating meaningful business insights from raw data.
 
 ---
 
