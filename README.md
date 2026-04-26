@@ -2,32 +2,76 @@
 
 ## 📌 Objective
 
-Convert SAS-based ETL logic into PySpark and validate output consistency
+Convert SAS-based ETL logic into PySpark and validate output consistency.
 
 ---
 
-## 🔄 Pipeline Flow
+## 🧠 Architecture
 
-Raw Data → Transformation → Aggregation → Output
+Source Data → PySpark Transformation → Aggregation → Validation → Output
 
 ---
 
 ## 🛠️ Tech Stack
 
-* SAS
 * PySpark
+* SAS
+* Python
 
 ---
 
-## 🔍 Features
+## 🔄 Pipeline Flow
 
-* Data filtering
-* Joins
-* Aggregations
-* Output validation
+1. Read source data (CSV)
+2. Apply filtering logic
+3. Perform aggregation
+4. Validate results
+5. Generate output
+
+---
+
+## ⚡ Key Highlights
+
+* Recreated SAS logic using PySpark
+* Applied filtering and aggregation
+* Validated transformation results
+* Designed scalable processing approach
+
+---
+
+## 📂 Project Structure
+
+data/ → input dataset
+sas/ → original SAS logic
+pyspark/ → PySpark transformation code
+validation/ → result validation logic
+
+---
+
+## 🧪 Sample Transformation
+
+### SAS Logic
+
+```sas
+proc sql;
+  select customer_id, sum(amount) as total
+  from orders
+  where amount > 100
+  group by customer_id;
+quit;
+```
+
+### PySpark Equivalent
+
+```python
+df.filter("amount > 100") \
+  .groupBy("customer_id") \
+  .sum("amount")
+```
 
 ---
 
 ## 📊 Outcome
 
-Equivalent results between SAS and PySpark implementations
+* Achieved equivalent results between SAS and PySpark
+* Demonstrated scalable data processing using Spark
