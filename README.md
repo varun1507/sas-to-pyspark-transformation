@@ -50,6 +50,7 @@ This step enables generating meaningful business insights from raw data.
 * Applied filtering and aggregation
 * Validated transformation results
 * Designed scalable processing approach
+* Implemented join between multiple datasets  
 
 ---
 
@@ -85,12 +86,12 @@ df.filter("amount > 100") \
 
 ---
 
-## 📊 Sample Output
+## 📊 Sample Output  
 
-| customer_id | total_amount |
-| ----------- | ------------ |
-| 1           | 200          |
-| 2           | 300          |
+customer_id | name  | city       | total_amount  
+------------|-------|------------|--------------  
+1           | Varun | Hyderabad  | 200  
+2           | Rahul | Bangalore  | 300  
 
 ---
 
