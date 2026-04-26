@@ -3,6 +3,12 @@
 ## 📌 Objective
 
 Convert SAS-based ETL logic into PySpark and validate output consistency.
+-----
+## 🧩 Business Use Case  
+
+This project simulates an e-commerce scenario where customer order data is processed to generate aggregated insights.
+
+The goal is to transform raw transactional data into meaningful metrics for reporting and analytics.
 
 ---
 
