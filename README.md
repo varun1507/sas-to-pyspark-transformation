@@ -14,9 +14,14 @@ The goal is to transform raw transactional data into meaningful metrics for repo
 
 ---
 
-## 🧠 Architecture
+## 🧠 Architecture  
 
-Source Layer → Transformation Layer (PySpark) → Aggregation → Validation Layer → Output Layer
+Source Layer (CSV)  
+→ Transformation Layer (PySpark)  
+→ Aggregation Layer  
+→ Join & Enrichment Layer  
+→ Validation Layer  
+→ Output Layer  
 
 ---
 
@@ -25,16 +30,21 @@ Source Layer → Transformation Layer (PySpark) → Aggregation → Validation L
 * PySpark
 * SAS
 * Python
+---
+## 📥 Data Sources  
 
+- `orders.csv` → Contains transactional order data  
+- `customers.csv` → Contains customer details (name, city)  
 ---
 
-## 🔄 Pipeline Flow
+## 🔄 Pipeline Flow  
 
-1. Read source data (CSV)
-2. Apply filtering logic
-3. Perform aggregation
-4. Validate results
-5. Generate output
+1. Read orders and customer datasets from CSV files  
+2. Apply business filtering logic (amount > 100)  
+3. Aggregate total transaction amount per customer  
+4. Join aggregated data with customer details  
+5. Validate transformation results  
+6. Generate enriched output dataset  
 ---
 ## 🔗 Join Logic  
 
@@ -94,7 +104,15 @@ customer_id | name  | city       | total_amount
 2           | Rahul | Bangalore  | 300  
 
 ---
+## ▶️ How to Run  
+
+1. Place input files in `data/` folder  
+2. Run PySpark script:  
+   ```bash
+   python pyspark/transformation.py
+---
 
 ## 🚀 Impact
 
 Demonstrates migration of legacy SAS ETL logic into scalable PySpark pipelines with validation and structured processing.
+
